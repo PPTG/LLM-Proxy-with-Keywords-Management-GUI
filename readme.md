@@ -24,6 +24,7 @@ flowchart LR
     style KeywordCheck fill:#ffd700
     style User fill:#b4d4ff
     style Response fill:#b4d4ff
+```
 
 [English](#english) | [Polski](#polski)
 
