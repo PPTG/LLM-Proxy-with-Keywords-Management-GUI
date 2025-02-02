@@ -63,6 +63,11 @@ Diagram pokazuje główny przepływ w aplikacji:
 4. Jeśli nie znaleziono słów kluczowych, pełny kontekst jest wysyłany do LLama.cpp
 5. Odpowiedź jest zwracana do użytkownika
 
+
+
+###UI
+![llm-proxy-llamacpp-flowise](./image/ui.png)
+
 [English](#english) | [Polski](#polski)
 
 ---
