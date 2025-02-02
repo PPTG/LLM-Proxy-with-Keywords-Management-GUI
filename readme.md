@@ -47,6 +47,21 @@ flowchart LR
     C -.- n1
     F -.- n2
 ```
+**[EN]**  
+The diagram shows the main flow of the application:
+1. User sends a request
+2. System checks for keywords
+3. If keywords are found, the request is cleaned and sent to Flowise
+4. If no keywords are found, the full context is sent to LLama.cpp
+5. Response is returned to the user
+
+**[PL]**  
+Diagram pokazuje główny przepływ w aplikacji:
+1. Użytkownik wysyła zapytanie
+2. System sprawdza słowa kluczowe
+3. Jeśli znaleziono słowa kluczowe, zapytanie jest czyszczone i wysyłane do Flowise
+4. Jeśli nie znaleziono słów kluczowych, pełny kontekst jest wysyłany do LLama.cpp
+5. Odpowiedź jest zwracana do użytkownika
 
 [English](#english) | [Polski](#polski)
 
