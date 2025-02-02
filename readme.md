@@ -174,9 +174,10 @@ docker compose -f docker-compose.debug.yml up
 ```
 
 #### Logs
-Access logs via:---
-<a name="polski"></a>
-## Polski
+Access logs via:
+```bash
+docker compose logs -f
+```
 
 ### Spis treści
 - [O projekcie](#o-projekcie)
