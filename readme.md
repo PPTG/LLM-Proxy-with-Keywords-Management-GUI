@@ -105,8 +105,8 @@ LLM Proxy is a tool that enables intelligent request routing between llama.cpp a
 ### Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/llm-proxy.git
-cd llm-proxy
+git clone https://github.com/PPTG/llm-proxy-llamacpp-flowise.git
+cd llm-proxy-llamacpp-flowise
 ```
 
 2. Configure environment variables in docker-compose.yml
@@ -278,8 +278,8 @@ LLM Proxy to narzędzie umożliwiające inteligentne przekierowywanie zapytań m
 ### Instalacja
 1. Sklonuj repozytorium
 ```bash
-git clone https://github.com/your-username/llm-proxy.git
-cd llm-proxy
+git clone https://github.com/PPTG/llm-proxy-llamacpp-flowise.git
+cd llm-proxy-llamacpp-flowise
 ```
 
 2. Skonfiguruj zmienne środowiskowe w docker-compose.yml
@@ -349,7 +349,7 @@ LLM Proxy to narzędzie umożliwiające inteligentne przekierowywanie zapytań m
 ### Instalacja
 1. Sklonuj repozytorium
 ```bash
-git clone https://github.com/your-username/llm-proxy.git
+git clone https://github.com/PPTG/llm-proxy-llamacpp-flowise.git
 cd llm-proxy
 ```
 
