@@ -1,5 +1,25 @@
 # LLM Proxy with Keywords Management GUI
 
+flowchart LR
+    User([User]) --> Request[Request]
+    Request --> KeywordCheck{Check\nKeywords}
+    
+    subgraph Proxy[LLM Proxy]
+        KeywordCheck --> |Match Found| CleanPrompt[Clean Prompt\nRemove Tags]
+        CleanPrompt --> Flowise[(Flowise)]
+        KeywordCheck --> |No Match| FullContext[Keep Full\nContext]
+        FullContext --> LLama[(LLama.cpp)]
+    end
+    
+    Flowise --> Response[Response]
+    LLama --> Response
+    Response --> User
+    
+    style Proxy fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style KeywordCheck fill:#ffd700
+    style User fill:#b4d4ff
+    style Response fill:#b4d4ff
+
 [English](#english) | [Polski](#polski)
 
 ---
