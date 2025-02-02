@@ -282,7 +282,7 @@ LLM Proxy to narzędzie umożliwiające inteligentne przekierowywanie zapytań m
 1. Sklonuj repozytorium
 ```bash
 git clone https://github.com/PPTG/llm-proxy-llamacpp-flowise.git
-cd llm-proxy
+cd llm-proxy-llamacpp-flowise
 ```
 
 2. Skonfiguruj zmienne środowiskowe w docker-compose.yml
