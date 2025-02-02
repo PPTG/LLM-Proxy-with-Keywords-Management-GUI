@@ -458,7 +458,7 @@ docker compose logs -f
 ```
 
 ---
-
+<a name="license-information"></a>
 ## License Information / Informacje o licencjach
 
 ### Project License / Licencja projektu
