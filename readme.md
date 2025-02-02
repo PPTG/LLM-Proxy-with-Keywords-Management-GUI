@@ -5,25 +5,48 @@
 #### Flow Diagram / Schemat przepływu
 
 ```mermaid
+```mermaid
 flowchart LR
-    User([User]) --> Request[Request]
-    Request --> KeywordCheck{Check\nKeywords}
+    %% Style definitions
+    classDef userStyle fill:#2563eb,stroke:#1d4ed8,color:white,rx:10,ry:10
+    classDef systemStyle fill:#4f46e5,stroke:#4338ca,color:white,rx:8,ry:8
+    classDef checkStyle fill:#7c3aed,stroke:#6d28d9,color:white,rx:15,ry:15
+    classDef processStyle fill:#8b5cf6,stroke:#7c3aed,color:white,rx:5,ry:5
+    classDef serviceStyle fill:#2dd4bf,stroke:#14b8a6,color:white,rx:10,ry:10
+    classDef responseStyle fill:#10b981,stroke:#059669,color:white,rx:10,ry:10
+
+    %% Nodes
+    U([👤 User]):::userStyle --> R[📨 Request]:::systemStyle
+    R --> K{🔍\nKeyword\nCheck}:::checkStyle
     
-    subgraph Proxy[LLM Proxy]
-        KeywordCheck --> |Match Found| CleanPrompt[Clean Prompt\nRemove Tags]
-        CleanPrompt --> Flowise[(Flowise)]
-        KeywordCheck --> |No Match| FullContext[Keep Full\nContext]
-        FullContext --> LLama[(LLama.cpp)]
+    subgraph proxy [" LLM Proxy System "]
+        direction TB
+        K --> |Found✅| C[🧹 Clean\nPrompt]:::processStyle
+        K --> |Not Found❌| F[📝 Full\nContext]:::processStyle
+        
+        C --> FW[(🔄 Flowise\nService)]:::serviceStyle
+        F --> LL[(🤖 LLama.cpp\nService)]:::serviceStyle
     end
     
-    Flowise --> Response[Response]
-    LLama --> Response
-    Response --> User
-    
-    style Proxy fill:#f5f5f5,stroke:#333,stroke-width:2px
-    style KeywordCheck fill:#ffd700
-    style User fill:#b4d4ff
-    style Response fill:#b4d4ff
+    FW --> Resp[📬 Response\nHandler]:::responseStyle
+    LL --> Resp
+    Resp --> U
+
+    %% Subgraph style
+    style proxy fill:#f8fafc,stroke:#94a3b8,stroke-width:2px
+
+    %% Add notes
+    subgraph notes [" "]
+        direction TB
+        n1[Clean Prompt removes\nemotional tags and\nhistory context]:::noteStyle
+        n2[Full Context keeps\nconversation history\nand all tags]:::noteStyle
+    end
+    style notes fill:none,stroke:none
+    classDef noteStyle fill:#fef3c7,stroke:#fcd34d,color:black,rx:5,ry:5
+
+    %% Connect notes
+    C -.- n1
+    F -.- n2
 ```
 
 [English](#english) | [Polski](#polski)
