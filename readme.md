@@ -5,7 +5,6 @@
 #### Flow Diagram / Schemat przepływu
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'background': 'transparent'}}}%%
 flowchart LR
     %% Style definitions
     classDef userStyle fill:#2563eb,stroke:#1d4ed8,color:white,rx:10,ry:10
@@ -43,7 +42,7 @@ flowchart LR
     end
     style notes fill:none,stroke:none
     classDef noteStyle fill:#fef3c7,stroke:#fcd34d,color:black,rx:5,ry:5
-    
+
     %% Connect notes
     C -.- n1
     F -.- n2
