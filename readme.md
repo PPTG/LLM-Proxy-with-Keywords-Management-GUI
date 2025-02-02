@@ -5,6 +5,7 @@
 #### Flow Diagram / Schemat przepływu
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'background': 'transparent'}}}%%
 flowchart LR
     %% Style definitions
     classDef userStyle fill:#2563eb,stroke:#1d4ed8,color:white,rx:10,ry:10
