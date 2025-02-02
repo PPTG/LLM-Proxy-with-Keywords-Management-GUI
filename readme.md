@@ -16,18 +16,18 @@ flowchart LR
 
     %% Nodes
     U([👤 User]):::userStyle --> R[📨 Request]:::systemStyle
-    R --> K{🔍\nKeyword\nCheck}:::checkStyle
+    R --> K{🔍KeywordCheck}:::checkStyle
     
     subgraph proxy [" LLM Proxy System "]
         direction TB
-        K --> |Found✅| C[🧹 Clean\nPrompt]:::processStyle
-        K --> |Not Found❌| F[📝 Full\nContext]:::processStyle
+        K --> |Found✅| C[🧹 Clean Prompt]:::processStyle
+        K --> |Not Found❌| F[📝 Full Context]:::processStyle
         
-        C --> FW[(🔄 Flowise\nService)]:::serviceStyle
-        F --> LL[(🤖 LLama.cpp\nService)]:::serviceStyle
+        C --> FW[(🔄 Flowise Service)]:::serviceStyle
+        F --> LL[(🤖 LLama.cpp Service)]:::serviceStyle
     end
     
-    FW --> Resp[📬 Response\nHandler]:::responseStyle
+    FW --> Resp[📬 Response Handler]:::responseStyle
     LL --> Resp
     Resp --> U
 
@@ -37,8 +37,8 @@ flowchart LR
     %% Add notes
     subgraph notes [" "]
         direction TB
-        n1[Clean Prompt removes\nemotional tags and\nhistory context]:::noteStyle
-        n2[Full Context keeps\nconversation history\nand all tags]:::noteStyle
+        n1[Clean Prompt removes emotional tags and history context]:::noteStyle
+        n2[Full Context keeps conversation history and all tags]:::noteStyle
     end
     style notes fill:none,stroke:none
     classDef noteStyle fill:#fef3c7,stroke:#fcd34d,color:black,rx:5,ry:5
