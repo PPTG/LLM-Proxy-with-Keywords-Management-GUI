@@ -1,5 +1,10 @@
 # LLM Proxy with Keywords Management GUI
 
+### Architecture / Architektura
+
+#### Flow Diagram / Schemat przepływu
+
+```mermaid
 flowchart LR
     User([User]) --> Request[Request]
     Request --> KeywordCheck{Check\nKeywords}
