@@ -502,7 +502,7 @@ Zapraszamy do współpracy! Szczegóły znajdują się w Wytycznych dla Współt
 
 ---
 
-Created with ❤️ by [Your Name/Organization]
+Created with ❤️ by PPTG
 
 
 
