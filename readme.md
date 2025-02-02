@@ -16,7 +16,7 @@ flowchart LR
 
     %% Nodes
     U([👤 User]):::userStyle --> R[📨 Request]:::systemStyle
-    R --> K{🔍KeywordCheck}:::checkStyle
+    R --> K{🔍Keyword Check}:::checkStyle
     
     subgraph proxy [" LLM Proxy System "]
         direction TB
