@@ -66,7 +66,7 @@ Diagram pokazuje główny przepływ w aplikacji:
 
 
 ###UI
-![llm-proxy-llamacpp-flowise](./image/ui.png)
+![llm-proxy-llamacpp-flowise](./images/ui.png)
 
 [English](#english) | [Polski](#polski)
 
