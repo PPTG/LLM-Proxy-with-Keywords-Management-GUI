@@ -235,7 +235,7 @@ docker compose logs -f
 - [Użytkowanie](#użytkowanie)
 - [Architektura](#architektura)
 - [Rozwiązywanie problemów](#rozwiązywanie-problemów)
-- [Informacje o licencji](#informacje-o-licencji)
+- [Informacje o licencji](#license-information)
 - [Współpraca](#współpraca)
 
 ### O projekcie
